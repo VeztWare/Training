@@ -1,0 +1,1 @@
+game.Players.LocalPlayer.Kick("Script taken down as requested by the game's respectful owners")
