@@ -47,7 +47,7 @@ local function getMatch()
     for _, obj in pairs(getgc(true)) do
         if type(obj) == 'table' then
             if rawget(obj, 'MatchFolder') then
-                return util
+                return obj
             end
         end
     end
