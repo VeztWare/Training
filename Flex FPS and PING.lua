@@ -15,8 +15,11 @@ x = getconnections(v7.OnClientEvent)[1].Function
 local old
 
 old = hookfunction(x, function(...) -- the rewiring of the original function signal
+    local args = {...}
+    table.foreach(args, print)
     v_u_8:FireServer({
         ["t"] = "metrics",
+        ["token"] = args[1].token,
         ["fps"] = Random.new():NextNumber(1500, 2400),
         ["gfx"] = 9,
         ["mem"] = v_u_2:GetTotalMemoryUsageMb(),
